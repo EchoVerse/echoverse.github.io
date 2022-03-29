@@ -40,12 +40,13 @@
   padding: 0;
 }
 
-body {
-  --e-global-color-primary: #fbd26a;
-  --e-global-color-secondary: #f0ebd8;
+html {
+  --e-global-color-primary: #acd69f;
+  --e-global-color-secondary: #ebf5e9;
   --e-global-color-text: #000000;
-  --e-global-color-dark: rgb(219, 198, 171);
-  --e-global-color-button: #456630;
+  --e-global-color-dark: #acd69fc3;
+  --e-global-color-light:#ebf5e93c;
+  --e-global-color-button: #e6d929;
   --e-global-color-linear1: #3ca55c;
   --e-global-color-linear2: #b5ac49;
   --e-global-typography-primary-font-family: "Righteous";
@@ -53,6 +54,7 @@ body {
 
   color: var(--e-global-color-text);
   font-family: var(--e-global-typography-text-font-family), Sans-serif;
+  font-size: 16px;
 }
 
 h1,
@@ -67,7 +69,7 @@ h6 {
 dl {
   width: 100%;
   overflow: hidden;
-  line-height: 2em;
+  line-height: 1.4em;
 }
 
 dt,
@@ -77,13 +79,14 @@ dd {
 }
 
 dt {
-  width: 40%;
+  width: 50%;
   text-align: right;
   padding-right: 12px;
+  color: #246438;
 }
 
 dd {
-  width: 60%;
+  width: 50%;
   text-align: left;
 }
 
@@ -106,6 +109,10 @@ footer {
 
 .background.dark {
   background-color: var(--e-global-color-dark) !important;
+}
+
+.background.light {
+  background-color: var(--e-global-color-light) !important;
 }
 
 .background.primary .shape.bottom path,
@@ -233,7 +240,7 @@ footer {
   display: inline-block;
   top: calc(50% - 8px);
   text-align: center;
-  font-size: 14px;
+  font-size: 1em;
   color: var(--e-global-color-text);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -248,27 +255,28 @@ footer {
   left: -110px;
 }
 
-.timeline .container .fa-solid {
-  position: absolute;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  padding: 9px 0;
-  top: calc(50% - 20px);
+.timeline .container .fa-solid,
+.timeline .container .fa-brands {
   background: #f6d155;
-  border: 2px solid var(--e-global-color-primary);
   border-radius: 40px;
-  text-align: center;
-  font-size: 18px;
   color: var(--e-global-color-text);
+  font-size: 1.2em;
+  height: 2em;
+  line-height: 2em;
+  position: absolute;
+  text-align: center;
+  top: calc(50% - 1em);
+  width: 2em;
   z-index: 1;
 }
 
-.timeline .container.left .fa-solid {
+.timeline .container.left .fa-solid,
+.timeline .container.left .fa-brands {
   right: 56px;
 }
 
-.timeline .container.right .fa-solid {
+.timeline .container.right .fa-solid,
+.timeline .container.right .fa-brands {
   left: 56px;
 }
 
@@ -286,7 +294,7 @@ footer {
 
 .timeline .container .content h2 {
   margin: 10px 0 8px 0;
-  font-size: 18px;
+  font-size: 1.4em;
   color: var(--e-global-color-text);
   font-weight: normal;
   line-height: 1.2;
@@ -294,7 +302,7 @@ footer {
 
 .timeline .container .content p {
   margin: 0;
-  font-size: 16px;
+  font-size: 1em;
   line-height: 22px;
   color: var(--e-global-color-text);
   padding-bottom: 12px;
@@ -359,6 +367,10 @@ footer {
   color: var(--e-global-color-text);
 }
 
+.ui.accordion .content {
+  margin-left: 1em;
+}
+
 .ui.button {
   border-radius: 30px;
 }
@@ -383,10 +395,21 @@ footer {
   font-size: 2em;
 }
 
+.ui.left.aligned.image {
+  text-align: left;
+}
+
 video.ui.bordered.image {
   background-color: rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 2px;
+}
+
+.ui.center.aligned.container .ui.menu,
+section.landing.section .eight.wide.column.left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 section.section {
@@ -397,7 +420,7 @@ section.section > .ui.container > h2 {
   font-size: 3em;
 }
 
-section.section .ui.cards > .card {
+section.section .ui.cards > div.card:not(.image) {
   border-radius: 30px;
   padding: 60px 40px 60px 40px;
   box-shadow: none;
@@ -415,12 +438,6 @@ section.section .ui.cards > .card > h3 {
   font-family: var(--e-global-typography-text-font-family), Sans-serif;
   font-size: 2em;
   font-weight: normal;
-}
-
-section.landing.section .eight.wide.column.left {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 section.landing.section h1 {
@@ -445,6 +462,22 @@ footer .shape svg {
   height: 50px;
 }
 
+section.launch .ui.card.image {
+  background: transparent;
+  border-radius: 20px;
+  box-shadow: none;
+}
+
+section.launch .plan .card {
+  font-size: 1.2em;
+}
+
 section.roadmap {
   padding: 60px 0 60px 0;
+}
+
+footer .ui.text.menu{
+  font-size: 1.5rem;
+  line-height: 1.2em;
+  margin: 0;
 }
