@@ -436,7 +436,7 @@ section.section .ui.cards > .card > i {
 
 section.section .ui.cards > .card > h3 {
   font-family: var(--e-global-typography-text-font-family), Sans-serif;
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: normal;
 }
 
