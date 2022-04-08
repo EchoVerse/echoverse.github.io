@@ -358,7 +358,7 @@ video.ui.bordered.image {
 }
 
 .ui.center.aligned.container .ui.menu,
-section.landing.section .eight.wide.column.left {
+section.landing.section .eight.wide.column:nth-child(2) {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -394,6 +394,10 @@ section.section .ui.cards > .card > h3 {
 
 section.section h1 {
   font-size: 4em;
+}
+
+section.landing.section .eight.wide.column:nth-child(1) {
+  order: 1;
 }
 
 section.landing.section p {
@@ -526,6 +530,10 @@ footer .ui.text.menu {
 
   section.section .ui.cards > .card > h3 {
     font-size: 1.4em;
+  }
+
+  section.landing.section .eight.wide.column:nth-child(1) {
+    order: unset;
   }
 
   section.faq {
