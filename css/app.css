@@ -82,7 +82,7 @@ dt {
   color: #246438;
   padding-right: 12px;
   text-align: right;
-  width: 50%;
+  width: calc(50% - 12px);
 }
 
 dd {
@@ -439,6 +439,16 @@ footer .ui.text.menu {
 }
 
 @media (max-width: 767.98px) {
+  .ui.four.doubling.cards > .card {
+    width: calc(50% - 1em);
+    margin: 0.5em;
+  }
+
+  .ui.stackable.cards > .card {
+    width: calc(100% - 4em) !important;
+    margin: 1em 2em;
+  }
+
   .timeline::after {
     left: 30px;
   }
@@ -474,10 +484,9 @@ footer .ui.text.menu {
 
   .timeline .container.left .date,
   .timeline .container.right .date {
-    left: 0;
-    margin-top: 10px;
+    left: -12px;
     right: auto;
-    transform: rotate(45deg);
+    transform: rotate(90deg);
   }
 
   .timeline .container.left .fa,
@@ -520,12 +529,16 @@ footer .ui.text.menu {
     margin: 32px;
   }
 
+  section.section > .ui.container > h2 {
+    font-size: 2em;
+  }
+
   section.section h1 {
     font-size: 3em;
   }
 
-  section.section > .ui.container > h2 {
-    font-size: 2em;
+  section.section .ui.cards > div.card:not(.image) {
+    padding: 40px !important;
   }
 
   section.section .ui.cards > .card > h3 {
@@ -536,7 +549,27 @@ footer .ui.text.menu {
     order: unset;
   }
 
+  section.launch.section .ui.four.doubling.cards {
+    margin: 0 1em 0 1em;
+  }
+
   section.faq {
     padding: 60px 0 60px 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  section.section > .ui.container > h2 {
+    font-size: 2.6em;
+  }
+
+  section.section h1 {
+    font-size: 3.2em;
+  }
+
+  section.launch.section .ui.three.cards > .card {
+    width: calc(50% - 2em);
+    margin-left: 1em;
+    margin-right: 1em;
   }
 }
