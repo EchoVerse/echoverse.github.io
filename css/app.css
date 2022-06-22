@@ -368,6 +368,11 @@ section.landing.section .eight.wide.column:nth-child(2) {
   justify-content: center;
 }
 
+.ui.navbar.container {
+  position: relative;
+  z-index: 999;
+}
+
 section.section {
   padding: 60px 0 120px 0;
 }
@@ -414,7 +419,6 @@ section.landing.section {
   margin-top: -100px;
   padding-top: 120px;
   text-shadow: var(--e-global-color-secondary) 0 0 0;
-  z-index: -1;
 }
 
 section.landing.section .ui.container,
@@ -472,6 +476,10 @@ section.partnership {
 section.partnership .ui.circular.image {
   background-color: #fff;
   margin-bottom: 12px;
+}
+
+section.partnership a .ui.circular.image + span {
+  color: var(--e-global-color-text);
 }
 
 section.faq {
